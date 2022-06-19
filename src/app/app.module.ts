@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 // Routing
-import { AppRoutingModule } from './Router/app-routing.module';
 import { RouterModule } from '@angular/router';
-import routes from './Router/routes';
 
 // Components
 import { AppComponent } from './app.component';
+
+// Custome Modules
+import { AdminModule } from './admin/admin.module';
+import { PublicModule } from './public/public.module';
 
 // Firebase
 import { environment } from 'src/environments/environment';
@@ -18,8 +20,9 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    RouterModule.forRoot(routes),
+    AdminModule,
+    PublicModule,
+    RouterModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
   ],
