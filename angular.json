@@ -101,6 +101,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Hamid-javadi:build:production",
+            "firebaseProject": "hamidjavadi-56f12",
+            "firebaseHostingSite": "hamidjavadi-56f12"
+          }
         }
       }
     }

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "hamidjavadi-56f12": {
+      "hosting": {
+        "Hamid-javadi": [
+          "hamidjavadi-56f12"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "hamidjavadi-56f12"
+  }
+}
