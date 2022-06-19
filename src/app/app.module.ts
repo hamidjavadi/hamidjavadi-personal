@@ -1,17 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
 
-import { AppComponent } from './app.component';
-// import { IndexComponent } from './pages/index/index.component';
+// Routing
 import { AppRoutingModule } from './Router/app-routing.module';
+import { RouterModule } from '@angular/router';
 import routes from './Router/routes';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-// import routes from './Router/routes';
+
+// Components
+import { AppComponent } from './app.component';
+
+// Firebase
+import { environment } from 'src/environments/environment';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 @NgModule({
-  declarations: [AppComponent, NotFoundComponent],
-  imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(routes)],
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule.forRoot(routes),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
