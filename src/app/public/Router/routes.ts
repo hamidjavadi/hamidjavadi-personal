@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { IndexComponent } from '../pages/index/index.component';
-import { NotFoundComponent } from '../pages/not-found/not-found.component';
+import { IndexComponent } from '../components/index/index.component';
+import { NotFoundComponent } from '../components/not-found/not-found.component';
 
 const routes: Routes = [
   {
