@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { AdminComponent } from '../pages/admin/admin.component';
-import { DashboardComponent } from '../pages/dashboard/dashboard.component';
+import { AdminComponent } from '../admin.component';
+import { DashboardComponent } from '../components/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
