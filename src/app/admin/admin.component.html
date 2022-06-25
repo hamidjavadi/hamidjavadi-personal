@@ -2,16 +2,7 @@
 
 <mat-drawer-container class="admin-container">
   <mat-drawer #drawer class="admin-sidenav" mode="side" [opened]="true">
-    <mat-nav-list>
-      <mat-list-item routerLink="/admin">
-        <mat-icon matListIcon>info</mat-icon>
-        <span matLine>Dashboard</span>
-      </mat-list-item>
-      <mat-list-item routerLink="/admin/profile">
-        <mat-icon matListIcon>person</mat-icon>
-        <span matLine>Profile</span>
-      </mat-list-item>
-    </mat-nav-list>
+    <app-admin-sidebar></app-admin-sidebar>
   </mat-drawer>
 
   <div class="example-sidenav-content">
