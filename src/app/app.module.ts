@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Routing
 import { RouterModule } from '@angular/router';
@@ -19,6 +20,7 @@ import { AngularFireModule } from '@angular/fire/compat';
   declarations: [AppComponent],
   imports: [
     AdminModule,
+    BrowserAnimationsModule,
     BrowserModule,
     PublicModule,
     RouterModule,

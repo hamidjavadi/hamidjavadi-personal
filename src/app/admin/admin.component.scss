@@ -1,0 +1,13 @@
+app-admin {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.admin-container {
+  height: 100%;
+
+  .admin-sidenav {
+    min-width: 250px;
+  }
+}
