@@ -11,6 +11,12 @@ import { SigninComponent } from './components/signin/signin.component';
 import { AuthGuardModule } from '@angular/fire/auth-guard';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { NavbarComponent } from './components/navbar/navbar.component';
+
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -18,6 +24,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     LoginComponent,
     ProfileComponent,
     SigninComponent,
+    NavbarComponent,
   ],
   imports: [
     CommonModule,
@@ -26,6 +33,10 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     AngularFireAuthModule,
     AngularFirestoreModule,
     AuthGuardModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
+    MatIconModule,
   ],
   providers: [],
 })

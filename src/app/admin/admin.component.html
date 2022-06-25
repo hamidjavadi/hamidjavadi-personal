@@ -1,2 +1,21 @@
-<p>admin works!</p>
-<router-outlet></router-outlet>
+<app-navbar (toggleSidebar)="toggleSidebar()"></app-navbar>
+
+<mat-drawer-container class="admin-container">
+  <mat-drawer #drawer class="admin-sidenav" mode="side" [opened]="true">
+    <mat-nav-list>
+      <mat-list-item routerLink="/admin">
+        <mat-icon matListIcon>info</mat-icon>
+        <span matLine>Dashboard</span>
+      </mat-list-item>
+      <mat-list-item routerLink="/admin/profile">
+        <mat-icon matListIcon>person</mat-icon>
+        <span matLine>Profile</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+
+</mat-drawer-container>
