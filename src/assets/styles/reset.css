@@ -82,3 +82,10 @@ meter {
 :where([draggable="true"]) {
   -webkit-user-drag: element;
 }
+
+input:autofill,
+input:-webkit-autofill,
+input:-internal-autofill-selected,
+input:-webkit-internal-autofill-selected {
+  background-color: transparent;
+}
