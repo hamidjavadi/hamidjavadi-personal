@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.scss']
+  styleUrls: ['./signin.component.scss'],
 })
 export class SigninComponent implements OnInit {
+  constructor(private authServcie: AuthService) {}
 
-  constructor() { }
+  email: string = '';
+  password: string = '';
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  submit() {
+    this.authServcie.signIn(this.email, this.password);
   }
-
 }

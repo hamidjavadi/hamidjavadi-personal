@@ -23,12 +23,10 @@ export class AdminAuthGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    console.log('route guard');
-
     if (this.authService.isSignedIn()) {
       return true;
     } else {
-      this.router.navigate(['/admin/signin']);
+      this.router.navigate(['/admin-signin']);
       return false;
     }
   }

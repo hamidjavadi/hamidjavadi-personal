@@ -1,1 +1,20 @@
-<p>signin works!</p>
+<mat-drawer-container class="container">
+  <section class="form-container">
+    <form id="signin-form" (submit)="submit()">
+      <div>
+        <h1 id="form-title">Sign in to Admin panel</h1>
+      </div>
+
+      <mat-form-field appearance="standard">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput [(ngModel)]="email" name="email">
+      </mat-form-field>
+
+      <mat-form-field appearance="standard">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput [(ngModel)]="password" name="password">
+      </mat-form-field>
+      <button type="submit" mat-raised-button>Sign in</button>
+    </form>
+  </section>
+</mat-drawer-container>

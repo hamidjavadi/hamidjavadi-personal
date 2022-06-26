@@ -1,11 +1,21 @@
 <mat-nav-list>
+  <!-- Dashboard -->
   <mat-list-item routerLink="/admin" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact: true}">
-    <mat-icon matListIcon>info</mat-icon>
+    <mat-icon matListIcon>dashboard</mat-icon>
     <span matLine>Dashboard</span>
   </mat-list-item>
+  <!-- ./Dashboard -->
+  <!-- Profile -->
   <mat-list-item routerLink="/admin/profile" routerLinkActive="router-link-active"
     [routerLinkActiveOptions]="{exact: true}">
     <mat-icon matListIcon>person</mat-icon>
     <span matLine>Profile</span>
   </mat-list-item>
+  <!-- ./Profile -->
+  <!-- Signout -->
+  <mat-list-item (click)="signOut()">
+    <mat-icon matListIcon>logout</mat-icon>
+    <span matLine>Sign out</span>
+  </mat-list-item>
+  <!-- ./Signout -->
 </mat-nav-list>

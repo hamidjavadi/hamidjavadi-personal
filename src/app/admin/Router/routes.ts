@@ -7,6 +7,10 @@ import { AdminAuthGuard } from '../guards/admin-auth.guard';
 
 const routes: Routes = [
   {
+    path: 'admin-signin',
+    component: SigninComponent,
+  },
+  {
     path: 'admin',
     component: AdminComponent,
     children: [
@@ -14,10 +18,6 @@ const routes: Routes = [
         path: '',
         component: DashboardComponent,
         canActivate: [AdminAuthGuard],
-      },
-      {
-        path: 'signin',
-        component: SigninComponent,
       },
       {
         path: 'profile',

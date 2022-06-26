@@ -1,0 +1,23 @@
+.container {
+  height: 100%;
+}
+
+#form-title {
+  text-align: left;
+}
+
+.form-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+#signin-form {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+  width: 100%;
+}
