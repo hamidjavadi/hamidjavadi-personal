@@ -30,16 +30,9 @@ export class AuthService {
     }
 
     // Start to authentication
-    this.fireAuth
-      .signInWithEmailAndPassword(email, password)
-      .then((response) => {
-        if (response.user) {
-          this.router.navigate(['/admin/profile']);
-        }
-      })
-      .catch((error) => {
-        throw new Error(error.message);
-      });
+    this.fireAuth.signInWithEmailAndPassword(email, password).catch((error) => {
+      throw new Error(error.message);
+    });
   }
 
   /**
@@ -47,7 +40,6 @@ export class AuthService {
    */
   signOut() {
     this.fireAuth.signOut();
-    this.router.navigate(['/admin/signin']);
   }
 
   /**
@@ -68,8 +60,10 @@ export class AuthService {
     this.fireAuth.authState.subscribe((user) => {
       if (user) {
         localStorage.setItem('admin', JSON.stringify(user));
+        this.router.navigate(['/admin']);
       } else {
-        localStorage.setItem('admin', 'null');
+        localStorage.removeItem('admin');
+        this.router.navigate(['/admin-signin']);
       }
     });
   }
